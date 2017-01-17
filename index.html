@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Lunch Checker</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="scripts/angular.min.js"></script>
+        <script src="scripts/app.js"></script>
+        <link rel="stylesheet" href="styles/AppStyle.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body ng-app="appModule">
+        <div class="container">
+            <h1>Keep it in check!</h1>
+            <div ng-controller="lunchController">
+                <div id="inputdiv">
+                    Enter food items you ate:<br/>
+                    <input type="text" placeholder="item1,item2, so on.." ng-model="lunch">
+                    <button type="button" ng-click="isMuch();">Check if too much!</button>
+                </div>
+                <br/>
+                <div id="outputdiv">
+                    {{result}}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
